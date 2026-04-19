@@ -12,6 +12,7 @@
 \usepackage{lipsum} % For generating filler text if extreme padding is explicitly needed by the user
 \usepackage{float}
 \usepackage{stfloats}
+\usepackage{hyperref}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -45,6 +46,8 @@ The challenge we address in this paper is highly combinatorial. Firstly, accurat
 To solve this, our proposed framework tightly couples a discrete multi-head Language Identification (LID) system with an N-gram logit-biased subword decoder. The translated text undergoes rule-based Phonetic (IPA) mapping before zero-shot voice synthesis. Critically, to preserve the "teaching style", we completely bypass the native flat-attention mechanism of the synthesizer by rigorously imposing Dynamic Time Warping (DTW) alignments of the source lecture's Fundamental Frequency ($F_0$) and acoustic energy contours. 
 
 To guarantee security against synthetic hallucinations and fraudulent cloning, we also integrate a Linear Frequency Cepstral Coefficients (LFCC) Anti-Spoofing pipeline and assess the system's absolute threshold of failure using Fast Gradient Sign Method (FGSM) audio injections at Signal-to-Noise Ratios (SNR) strictly greater than 40 dB.
+
+\textbf{Code Availability:} The complete source code, trained checkpoints, and experimental configurations for this assignment are fully open-sourced and available at: \url{https://github.com/PrateekKumar15/Speech_Understanding_Assignment2}.
 
 
 \section{Related Work}
