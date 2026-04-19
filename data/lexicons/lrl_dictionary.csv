@@ -1,0 +1,6 @@
+source,target
+speech,replace_with_lrl_speech
+signal,replace_with_lrl_signal
+stochastic,replace_with_lrl_stochastic
+cepstrum,replace_with_lrl_cepstrum
+phoneme,replace_with_lrl_phoneme

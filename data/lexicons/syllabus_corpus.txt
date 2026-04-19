@@ -1,0 +1,3 @@
+speech processing stochastic cepstrum mel frequency spectral envelope linear predictive coding
+phoneme allophone acoustics waveform energy contour dynamic time warping hidden markov model
+code switching language identification beam search constrained decoding adversarial perturbation

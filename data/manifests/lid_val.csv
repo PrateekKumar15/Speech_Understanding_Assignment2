@@ -1,0 +1,3 @@
+audio_path,start_sec,end_sec,lang
+data/samples/original_segment.wav,10.0,15.0,en
+data/samples/original_segment.wav,15.0,20.0,hi

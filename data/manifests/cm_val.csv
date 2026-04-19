@@ -1,0 +1,3 @@
+audio_path,label
+data/samples/student_voice_ref.wav,bona_fide
+data/samples/original_segment.wav,spoof

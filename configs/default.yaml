@@ -1,0 +1,56 @@
+seed: 42
+device: cuda
+sample_rate: 16000
+
+paths:
+  lecture_audio: data/samples/original_segment.wav
+  clean_audio: outputs/clean_segment.wav
+  lid_train_manifest: data/manifests/lid_train.csv
+  lid_val_manifest: data/manifests/lid_val.csv
+  syllabus_text: data/lexicons/syllabus_corpus.txt
+  custom_dictionary: data/lexicons/lrl_dictionary.csv
+  student_voice_ref: data/samples/student_voice_ref.wav
+  output_cloned: outputs/output_LRL_cloned.wav
+
+preprocessing:
+  noise_seconds: 0.5
+  n_fft: 512
+  hop_length: 128
+  win_length: 512
+  alpha: 2.0
+  floor_db: -35.0
+
+lid:
+  n_mels: 80
+  frame_length_ms: 25
+  frame_shift_ms: 10
+  hidden_size: 192
+  num_layers: 2
+  dropout: 0.2
+  batch_size: 8
+  num_epochs: 25
+  learning_rate: 0.0005
+
+stt:
+  beam_size: 20
+  lm_order: 3
+  lm_weight: 1.2
+  bias_weight: 2.0
+  bias_terms:
+    - stochastic
+    - cepstrum
+    - allophone
+    - phoneme
+    - spectral
+
+tts:
+  output_sample_rate: 22050
+  speaker_embedding_dim: 256
+  n_mels: 80
+  mel_hop_length: 256
+
+adversarial:
+  eps_start: 0.0001
+  eps_end: 0.02
+  eps_steps: 25
+  min_snr_db: 40.0
